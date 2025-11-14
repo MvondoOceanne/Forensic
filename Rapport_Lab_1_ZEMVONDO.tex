@@ -1,0 +1,193 @@
+\documentclass[12pt,a4paper]{report}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\usepackage{graphicx} 
+
+\begin{document}
+	
+	
+	\begin{titlepage}
+		\centering
+		
+	
+		\includegraphics[width=0.25\textwidth]{logo.png}\\[2cm]
+		
+	
+		{\Huge \textbf{Théories et Pratiques de
+				l’Investigation Numérique}}\\[1.5cm]
+		
+		
+		{\Large Matière : Théories et Pratiques de
+			l’Investigation Numérique}\\[0.5cm]
+		{\Large Enseignant :M. MINKA Thierry}\\[0.5cm]
+		{\Large Année académique : 2025--2026}\\[2cm]
+		
+		
+		{\Large  Par l'étudiante : ZE MVONDO Océanne M.}\\[0.5cm]
+		{\Large Filière : 4e année CIN }\\[2cm]
+		
+		
+		
+	 \includegraphics[width=0.6\textwidth]{C:/Users/USER/Documents/COURS/CIN 4/forensic.jpg}\\[4cm]
+		
+	
+	
+	\end{titlepage}
+	
+	
+	
+	\setlength{\parskip}{1em} 
+	\setlength{\parindent}{0pt} 
+	
+	\section*{Rapport de Travail : Lab de Sécurité Informatique - Configuration d'un Environnement Réseau Fonctionnel et Sécurisé}
+	
+	\section{Introduction}
+	
+	
+	Dans ce lab, notre objectif était de configurer une infrastructure réseau sécurisée et fonctionnelle en utilisant GNS3 et VMware. Nous avons mis en place un équipement de frontière, une DMZ avec un serveur web basé sur XAMPP, et un poste de travail sous Windows 10. Ce rapport décrit chaque étape que nous avons suivie pour réaliser cette configuration.
+	
+ 
+	
+	\subsection{Étape 1 : Création des postes de travail}
+
+	
+	\subsubsection{1.1 Installation des machines virtuelles avec VMware}
+
+	Pour commencer, nous avons installé VMware Workstation Pro. Voici les étapes suivies :
+	
+		Téléchargement et installation de VMware Workstation Pro :
+	
+	• Nous avons téléchargé l'installateur depuis le site officiel de VMware.
+	
+	• Nous avons lancé l'installateur et suivi les instructions à l'écran pour installer le logiciel.
+	
+		Création d'une machine virtuelle pour Windows 10 :
+	
+	• Nous avons ouvert VMware Workstation et cliqué sur "Créer une nouvelle machine virtuelle".
+	
+	• Nous avons sélectionné "Installer le système d'exploitation ultérieurement" et cliqué sur "Suivant".
+	
+	• Nous avons choisi "Microsoft Windows" comme système d'exploitation et "Windows 10" comme version
+	.
+	
+	• Nous avons attribué 2 Go de RAM et 10 Go d'espace disque dur.
+	
+	• Nous avons configuré le réseau en mode "NAT" pour permettre à la VM d'accéder à Internet.
+	
+	• Nous avons terminé la configuration et lancé la VM avec un fichier ISO de Windows 10 pour procéder à l'installation.
+	
+	\subsubsection{1.2 Installation de Windows 10}	
+	
+		Installation du système d'exploitation :
+	
+	• Une fois la VM lancée, nous avons suivi les instructions à l'écran pour installer Windows 10.
+	
+	• Nous avons créé un compte utilisateur et configuré les paramètres de confidentialité selon mes préférences.
+	
+		Préparation de l'environnement :
+	
+	• Une fois l'installation terminée, nous avons copié 2 Go de données sur le Bureau et dans le dossier « Mes documents » pour simuler des fichiers personnels.
+	
+\subsubsection{1.3 Création du serveur web avec XAMPP}	
+	
+		Installation de XAMPP sur la machine virtuelle Linux :
+	
+	• Nous avons créé une nouvelle VM dans VMware pour un serveur Linux (j'ai choisi Ubuntu).
+	
+	• Nous avons suivi les mêmes étapes que pour la VM Windows, mais cette fois-ci j'ai attribué les ressources nécessaires pour Ubuntu.
+	
+	
+	• Une fois Ubuntu installé, nous avons téléchargé le package XAMPP depuis le site officiel d'Apache Friends.
+	
+	
+	• Nous avons ouvert un terminal et navigué vers le répertoire où le fichier d'installation a été téléchargé.
+	
+	• Nous avons exécuté la commande suivante pour rendre le fichier exécutable :
+	Bash
+	chmod +x xampp-linux-x64-7.x.x-installer.run
+	
+	
+	• Ensuite, nous avons lancé l'installation avec :
+	Bash	
+	sudo ./xampp-linux-x64-7.x.x-installer.run
+	
+	
+	• nous avons suivi les instructions à l'écran pour terminer l'installation.
+	
+	3. Configuration du serveur web :
+	
+	• Après installation, nous avons démarré XAMPP avec la commande :
+	Bash
+	sudo /opt/lampp/lampp start
+	
+	• Nous avons créé une page d'accueil basique dans le répertoire /opt/lampp/htdocs/.
+	
+\subsection{Étape 2 : Créations de l'infrastructure}	
+	
+\subsubsection{2.1 Installation de GNS2}	
+	
+	Nous avons téléchargé et installé GNS3, qui est un simulateur de réseau. Cela nous a permis de créer un schéma réseau virtuel.
+	
+\subsubsection{2.2 Création du projet Lab 1}		
+	
+	Une fois GNS3 ouvert, nous avons créé un nouveau projet que nous avons nommé LAB1.
+	
+\subsubsection{2.3 Configuration des équipements actifs de l'infrastructure}	
+	
+	2.3.1 Équipement de frontière
+	
+	Dans GNS3, nous avons ajouté un routeur que nous avons appelé Routeur.
+	
+		Nous avons configuré l'interface R-Eth0 avec une adresse IP 
+	
+		Nous avons configuré l'interface R-Eth1 avec une adresse IP 
+	
+	2.3.2 Installation du firewall Fortigate
+	
+		Pour installer le firewall Fortigate, nous avons téléchargé l'image ISO du FortiGate depuis le site officiel.
+		
+		Dans GNS3, nous avons ajouté une nouvelle appliance Fortigate en utilisant l'image ISO téléchargée.
+	
+\subsubsection{3. Configurations des interfaces de firewall}	
+	
+	• F-Eth0 connecté au switch.
+	
+	• F-Eth1 connecté au serveur web (Linux).
+	
+
+		Nous avons ajouté un switch que j'ai nommé Switch1.
+	
+	• Nous avons connecté S-Eth0 au R-Eth1.
+	
+	• Nous avons connecté S-Eth1 au firewall
+ Fortigate.
+ 
+	• Noud avons  connecté S-Eth2 au poste de travail Windows.
+	
+\subsection{Étape 3 : Fonctionnement de l'infrastructure}	
+	
+\subsubsection{3.1 Ajouts des machines virtuelles}
+	
+	Nous avons ajouté les deux machines virtuelles (Windows et Linux) au projet LAB1 dans GNS3.
+	
+\subsubsection{3.2 Configuration des communications}	
+	
+		Nous avons connecté la VM Windows à S-Eth2 du switch.
+		
+		Nous avons connecté la VM Linux à F-Eth1 du firewall.
+		Pour vérifier que tout fonctionnait, nous avons ouvert un navigateur sur la VM Windows et nous avons essayé d'accéder à l'application web sur la VM Linux en utilisant l'adresse IP du serveur web.
+	
+	
+	
+\subsection{Conclusion}
+	
+	Après avoir suivi toutes ces étapes, nous avons réussi à créer un environnement réseau sécurisé et fonctionnel qui simule une infrastructure réelle avec un poste de travail et un serveur web basé sur XAMPP. 
+	
+	
+\end{document}
