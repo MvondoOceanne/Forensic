@@ -1,0 +1,144 @@
+\documentclass[12pt,a4paper]{report}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\usepackage{graphicx} 
+
+\begin{document}
+	
+	
+	\begin{titlepage}
+		\centering
+		
+	
+		\includegraphics[width=0.25\textwidth]{logo.png}\\[2cm]
+		
+	
+		{\Huge \textbf{Théories et Pratiques de
+				l’Investigation Numérique}}\\[1.5cm]
+		
+		
+		{\Large Matière : Théories et Pratiques de
+			l’Investigation Numérique}\\[0.5cm]
+		{\Large Enseignant :M. MINKA Thierry}\\[0.5cm]
+		{\Large Année académique : 2025--2026}\\[2cm]
+		
+		
+		{\Large  Par l'étudiante : ZE MVONDO Océanne M.}\\[0.5cm]
+		{\Large Filière : 4e année CIN }\\[2cm]
+		
+		
+		
+	 \includegraphics[width=0.6\textwidth]{C:/Users/USER/Documents/COURS/CIN 4/forensic.jpg}\\[4cm]
+		
+	
+	
+	\end{titlepage}
+	
+	
+	
+	\setlength{\parskip}{1em} 
+	\setlength{\parindent}{0pt} 
+	
+	\section*{Expertise 1 : Ordonnance de renvoi}
+	
+
+	
+	Une ordonnance de renvoi est un acte juridique rendu par un juge d’instruction (ou parfois une autre juridiction d’enquête) à la fin de son enquête, qui sert à envoyer une personne mise en examen devant une juridiction de jugement.
+	
+	L’ordonnance de renvoi signifie que :	l'enquête est terminée, le juge estime qu’il existe des charges suffisantes contre la personne, ’affaire doit être jugée par un tribunal.
+	
+	 Selon la gravité des faits :
+	
+\begin{enumerate}
+	\item 	Tribunal de police → pour les contraventions
+	\item Tribunal correctionnel → pour les délits
+	\item  Tribunal de police → pour les contraventions
+	\item Cour d’assises → pour les crimes, via une ordonnance de mise en accusation (équivalent mais pour les crimes)
+\end{enumerate}	
+	
+	
+	
+	Elle contient notamment :
+	\begin{enumerate}
+	\item 	les faits reprochés,
+	
+	\item 	leur qualification juridique,
+	
+	\item 	les éléments de preuve,
+	
+	\item 	les personnes concernées,
+	
+	\item 	la juridiction devant laquelle elles sont renvoyées.
+	
+\end{enumerate}	
+
+	Après l’ordonnance de renvoi, le dossier quitte l’instruction et passe à la phase de jugement.
+	
+ 
+	
+\section*{Éléments d'investigation numérique dans une ordonnance de renvoi}
+
+Une ordonnance de renvoi peut contenir de nombreux éléments issus d'investigations numériques. Ces éléments permettent au magistrat de comprendre l'origine des données, leur valeur probante, leur intégrité et leur pertinence pour les faits reprochés. Cela inclut tout ce qui concerne les supports analysés, les méthodes utilisées pour les examiner et les résultats techniques qui ont un intérêt juridique. L'objectif est de présenter de manière claire et compréhensible ce que l'enquête numérique a permis d'établir.
+
+\subsection*{1. Éléments que l'on peut retrouver dans une ordonnance de renvoi}
+
+\subsubsection*{A. Origine et description des éléments numériques}
+Dans cette partie, l'ordonnance peut rappeler les types de supports saisis, comme les ordinateurs, téléphones, tablettes, disques durs externes, clés USB ou serveurs. Elle peut également préciser le cadre légal de la saisie, par exemple lors d'une perquisition, d'une réquisition ou d'une intervention en flagrance. Le magistrat doit pouvoir comprendre d'où viennent les données et dans quelles conditions elles ont été collectées.
+
+\subsubsection*{B. Garanties d'intégrité et de fiabilité}
+On peut retrouver les empreintes numériques des supports, comme des calculs de hash (par exemple MD5 ou SHA). Ces éléments servent à garantir que les données n'ont pas été modifiées pendant l'analyse. L'ordonnance peut mentionner que des copies forensiques ont été réalisées, indiquant que l'expert a travaillé sur une copie et non sur l'original, ce qui est nécessaire pour préserver l'intégrité des preuves.
+
+\subsubsection*{C. Résultats pertinents pour les faits}
+L'ordonnance de renvoi peut intégrer les principales conclusions de l'expertise numérique. Cela peut inclure des données trouvées dans les appareils, comme des fichiers, des images, des vidéos ou des documents. On peut également y trouver des historiques de navigation, des journaux de connexion, des données de géolocalisation ou tout autre élément qui permet de retracer une activité numérique. Les communications récupérées, comme les SMS, courriels ou messages issus de messageries, peuvent également être mentionnées. L'ordonnance peut aussi faire état des applications utilisées, des comptes enregistrés, des adresses IP associées ou de la présence d'outils de dissimulation comme des VPN ou des logiciels de chiffrement.
+
+\subsection*{2. Éléments que l'expert judiciaire doit mettre à disposition du magistrat}
+
+\subsubsection*{A. Le rapport d'expertise}
+L'expert doit produire un rapport clair et complet. Celui-ci contient la description de sa mission, la liste des supports analysés, les outils qu'il a utilisés et la manière dont il a procédé pour examiner les données. Le rapport doit aussi rappeler les calculs de hash réalisés et expliquer comment il a conservé l'intégrité des données tout au long de son travail.
+
+\subsubsection*{B. Les résultats détaillés des analyses}
+L'expert doit mettre à disposition les éléments qu'il a identifiés, classés et expliqués. Cela inclut les fichiers pertinents, les journaux techniques, les historiques, les communications ou toute autre donnée utile pour comprendre les faits. Il doit préciser quelles données sont exploitables, lesquelles ne le sont pas et pourquoi. Il doit aussi expliquer les horodatages et indiquer, lorsque c'est important, s'ils ont été convertis (par exemple entre un fuseau horaire local et l'UTC).
+
+\subsubsection*{C. Les annexes techniques}
+Le magistrat doit pouvoir consulter les annexes qui appuient le rapport, comme des listes de fichiers, des extraits de journaux, des copies d'écran ou des arborescences. Ces documents permettent de vérifier la cohérence du travail et d'illustrer des points techniques de manière visuelle et compréhensible.
+
+\subsubsection*{D. Une synthèse claire et compréhensible}
+L'expert doit toujours fournir une synthèse non technique, formulée de manière accessible. Cette synthèse explique ce que signifient les données trouvées, comment elles s'articulent avec les questions du magistrat et en quoi elles éclairent les faits reprochés. L'expert doit répondre point par point à la mission, rester neutre et présenter des conclusions appuyées sur des éléments objectifs.
+
+\subsection*{3. Points vérifiés par le magistrat avant de valider le renvoi}
+
+Le magistrat vérifie plusieurs aspects essentiels, comme l'intégrité des données analysées, la méthode utilisée par l'expert, la pertinence des éléments numériques par rapport aux faits poursuivis et la clarté de la présentation. Il doit s'assurer que la preuve a été traitée de manière régulière, que la chaîne de conservation des supports est respectée et que le rapport permet au tribunal de comprendre l'apport des éléments numériques au dossier.
+
+\section*{Analyse des éléments d’investigation numérique transmis dans l’ordonnance de renvoi}
+
+Dans le cadre de l’étude de l’ordonnance de renvoi que nous avons reçue, nous avons procédé à une analyse des éléments issus de l’investigation numérique qui ont été transmis au magistrat, ainsi que de ceux qui auraient pu être ajoutés pour rendre l’ensemble plus complet et plus cohérent. Cette étape est importante, car la qualité et l’exhaustivité des données numériques fournies influencent directement la compréhension des interactions entre les personnes impliquées, ainsi que la reconstitution des faits.
+
+Dans les éléments effectivement transmis, nous avons constaté la présence de plusieurs données de géolocalisation concernant les suspects ainsi que la victime. Ces informations permettent de situer les différents protagonistes à des moments clés et d’observer d’éventuels rapprochements géographiques. Elles constituent donc un premier apport utile pour retracer les déplacements et les possibles croisements entre les individus.
+
+Nous avons également relevé la présence de quelques conversations issues de WhatsApp. Ces échanges donnent un aperçu, même restreint, de la nature des communications entre certaines personnes impliquées. De plus, une partie des listings d’appels a été fournie, ce qui permet de reconstituer quelques séquences de contacts téléphoniques et d’identifier certains interlocuteurs. Toutefois, ces informations restent fragmentaires et ne couvrent qu’une partie des interactions susceptibles d’être pertinentes.
+
+En parallèle, nous avons identifié plusieurs éléments qui auraient pu être transmis afin d’offrir une vision plus complète. Concernant les communications, seules certaines conversations WhatsApp ont été incluses alors qu’une extraction intégrale de toutes les discussions de l’ensemble des suspects aurait permis d’obtenir une image plus globale de leurs échanges. Cela aurait facilité l’analyse des dynamiques relationnelles, la fréquence des communications et l’éventuelle préparation ou coordination des actes reprochés.
+
+De la même manière, les listings d’appels fournis ne représentent qu’une partie des données disponibles. Il aurait été pertinent d’inclure l’intégralité des historiques d’appels de tous les suspects, de manière à mieux comprendre les schémas de contact, les périodes d’activité inhabituelles, ou encore d’éventuelles communications qui n’apparaissent pas dans les extraits transmis. Ces données manquantes auraient pu aider à repérer des correspondances entre les appels, les déplacements ou d’autres éléments du dossier.
+
+En définitive, même si l’ordonnance comporte des informations numériques qui apportent déjà des éléments intéressants, l’ensemble aurait gagné en précision et en cohérence avec une transmission plus complète des données. Un corpus plus exhaustif — notamment en ce qui concerne les conversations et les historiques d’appels — aurait permis d’obtenir une reconstitution plus détaillée des interactions entre les différents individus et d’enrichir l’analyse globale du dossier.
+
+\bigskip
+
+\textbf{Conclusion}
+
+Ainsi, il apparaît que les données numériques fournies dans l’ordonnance de renvoi sont partielles et ne permettent pas une analyse pleinement exhaustive des échanges et déplacements des personnes concernées. Pour renforcer la solidité des éléments à charge ou à décharge, il serait essentiel de compléter ces informations par une transmission intégrale des conversations et des historiques d’appels. Cette démarche contribuerait à offrir une vision plus précise et complète du contexte numérique entourant les faits, ce qui est indispensable pour garantir une justice éclairée.
+
+
+\end{document}
+
+
+	
+	
+\end{document}
