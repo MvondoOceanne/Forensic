@@ -1,0 +1,225 @@
+\documentclass[12pt,a4paper]{report}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\usepackage{graphicx} 
+
+\begin{document}
+	
+	
+	\begin{titlepage}
+		\centering
+		
+	
+		\includegraphics[width=0.25\textwidth]{logo.png}\\[2cm]
+		
+	
+		{\Huge \textbf{Philosophie et Fondements de
+				l’Investigation Numérique}}\\[1.5cm]
+		
+		
+		{\Large Matière : Théories et Pratiques de
+			l’Investigation Numérique}\\[0.5cm]
+		{\Large Enseignant :M. MINKA Thierry}\\[0.5cm]
+		{\Large Année académique : 2025--2026}\\[2cm]
+		
+		
+		{\Large  Par l'étudiante : ZE MVONDO Océanne M.}\\[0.5cm]
+		{\Large Filière : 4e année CIN }\\[2cm]
+		
+		
+		
+	 \includegraphics[width=0.6\textwidth]{C:/Users/USER/Documents/COURS/CIN 4/forensic.jpg}\\[4cm]
+		
+	
+	
+	\end{titlepage}
+	
+	
+	
+	\setlength{\parskip}{1em} 
+	\setlength{\parindent}{0pt} 
+	
+	\section*{OSINT}
+	
+	\section{Méthodologie d’investigation numérique}
+	
+	\subsection{Introduction à la méthodologie}
+	La méthodologie d’investigation numérique constitue l’ensemble des étapes, techniques et bonnes pratiques permettant de conduire une recherche d’informations numériques de manière structurée, reproductible et éthique. Dans un contexte académique, elle vise à initier les étudiants aux méthodes rigoureuses utilisées dans la cybersécurité, l’analyse forensique et l’intelligence en sources ouvertes (OSINT). 
+	L’objectif n’est pas seulement de \og trouver \fg{} des informations, mais surtout de comprendre \og comment \fg{} les chercher, \og comment \fg{} les vérifier et \og comment \fg{} les présenter dans un cadre légal et scientifique.
+	
+	La démarche doit toujours respecter trois principes directeurs :
+	\begin{enumerate}
+		\item \textbf{Traçabilité} : chaque action doit pouvoir être reproduite ou vérifiée par un tiers ;
+		\item \textbf{Intégrité} : les données collectées ne doivent subir aucune altération ;
+		\item \textbf{Éthique} : la vie privée et la réputation des individus doivent être protégées.
+	\end{enumerate}
+	
+	\subsection{Définition du périmètre et des objectifs}
+	Toute investigation numérique commence par une phase de \textbf{cadrage}. Cette étape vise à préciser l’objectif exact de la recherche : s’agit-il d’analyser une présence numérique, d’étudier une organisation, de vérifier une rumeur ou d’identifier des traces techniques ? 
+	Le périmètre doit être limité et documenté dès le départ. On définit :
+	\begin{itemize}
+		\item les plateformes à explorer (réseaux sociaux, bases de données, sites institutionnels) ;
+		\item les mots-clés et variantes orthographiques des noms ou pseudonymes à utiliser ;
+		\item les types de données à collecter (textes, images, métadonnées, liens, publications).
+	\end{itemize}
+	Cette étape permet d’éviter les dérives telles que la collecte excessive ou la violation de la vie privée. Elle est consignée dans un document appelé \textit{plan d’investigation}, qui servira de référence pour tout le travail.
+	
+	\subsection{Planification et journalisation de la recherche}
+	Une fois les objectifs fixés, il faut élaborer un \textbf{plan de recherche} structuré. Celui-ci décrit la stratégie de collecte : quels moteurs utiliser, dans quel ordre, avec quels opérateurs et à quelle fréquence.  
+	
+	Chaque action doit être notée dans un \textbf{journal de recherche} (\textit{search log}). Ce document joue un rôle essentiel de traçabilité et comprend généralement :
+	\begin{itemize}
+		\item la date et l’heure de la requête ;
+		\item la requête exacte utilisée ;
+		\item la plateforme consultée ;
+		\item un résumé du résultat obtenu ;
+		\item les URLs ou captures associées ;
+		\item un commentaire ou niveau de fiabilité estimé.
+	\end{itemize}
+	Cette pratique garantit la transparence de la démarche et permet de revenir en arrière pour vérifier une source ou reproduire un résultat.
+	
+	\subsection{Collecte de données}
+	La collecte correspond à la phase opérationnelle de l’investigation. Elle consiste à récupérer uniquement des informations publiques et légalement accessibles, conformément aux règles d’éthique et aux lois sur la protection des données personnelles.
+	
+	\subsubsection{Techniques de recherche}
+	Les principales techniques reposent sur :
+	\begin{itemize}
+		\item l’utilisation d’opérateurs avancés dans les moteurs de recherche (ex. : \texttt{site:instagram.com ``nom prénom''}) ;
+		\item la consultation de profils publics sur les réseaux sociaux ;
+		\item la vérification d’archives web via la \textit{Wayback Machine} ;
+		\item l’analyse des métadonnées des documents disponibles ;
+		\item la recherche inversée d’images (Google Images, TinEye).
+	\end{itemize}
+	Chaque résultat pertinent est sauvegardé sous forme de \textbf{capture d’écran} (avec horodatage) ou de \textbf{sauvegarde locale} (fichier HTML ou PDF). Il est crucial de ne jamais modifier le contenu original, afin de préserver son intégrité.
+	
+	\subsubsection{Outils utilisés}
+	Parmi les outils courants :
+	\begin{itemize}
+		\item \texttt{wget} et \texttt{curl} pour télécharger des pages web ;
+		\item \texttt{exiftool} pour analyser les métadonnées d’images ;
+		\item tableurs ou scripts Python pour organiser les résultats ;
+		\item extensions de navigateur pour capturer les pages complètes.
+	\end{itemize}
+	La combinaison de ces outils permet d’obtenir une collecte fiable et documentée.
+	
+	\subsection{Préservation et documentation des preuves}
+	Les données collectées doivent être stockées de manière sécurisée et vérifiable. On recommande de :
+	\begin{itemize}
+		\item nommer les fichiers de manière standardisée (ex. : \texttt{capture\_nom\_2025-10-20\_heure.png}) ;
+		\item enregistrer les métadonnées (hash, date, heure) ;
+		\item conserver une copie du lien original (URL) ;
+		\item sauvegarder le tout dans un dossier structuré ou un dépôt Git.
+	\end{itemize}
+	La préservation garantit que les éléments pourront servir de référence ultérieure sans contestation. Elle constitue une exigence essentielle dans tout travail d’investigation numérique sérieux.
+	
+	\subsection{Analyse et recoupement}
+	Cette étape vise à interpréter les données collectées pour en tirer des conclusions cohérentes.  
+	L’analyse s’effectue selon plusieurs axes :
+	\begin{itemize}
+		\item \textbf{Vérification de cohérence interne} : les informations trouvées se contredisent-elles ? ;
+		\item \textbf{Recoupement externe} : d’autres sources indépendantes confirment-elles les données ? ;
+		\item \textbf{Évaluation de la fiabilité} : la source est-elle officielle, anonyme, récente, ou biaisée ? ;
+		\item \textbf{Interprétation contextuelle} : que révèlent ces données sur le sujet étudié ?
+	\end{itemize}
+	
+	On distingue trois niveaux de confiance :
+	\begin{description}
+		\item[Élevée :] source officielle, vérifiable et cohérente ;
+		\item[Moyenne :] source plausible mais non confirmée ;
+		\item[Faible :] source anonyme, non datée ou sujette à manipulation.
+	\end{description}
+	L’objectif n’est pas de juger, mais de décrire objectivement l’empreinte numérique observable.
+	
+	\subsection{Synthèse et rédaction du rapport}
+	La rédaction du rapport doit suivre une structure logique et claire. Chaque section doit indiquer :
+	\begin{itemize}
+		\item la méthode employée ;
+		\item les résultats observés ;
+		\item les limites de la recherche ;
+		\item les précautions éthiques prises.
+	\end{itemize}
+	Les résultats doivent être accompagnés de références précises (URL, date, capture, contexte).  
+	Toute supposition ou interprétation doit être explicitement signalée comme telle.  
+	
+	Un bon rapport d’investigation numérique est à la fois \textbf{analytique} (il explique le pourquoi et le comment) et \textbf{documenté} (il prouve ses affirmations).
+	
+	\subsection{Limites et précautions}
+	Aucune investigation numérique n’est exhaustive. Les résultats dépendent :
+	\begin{itemize}
+		\item des moteurs de recherche utilisés ;
+		\item des paramètres de confidentialité des plateformes ;
+		\item du moment de la consultation (les contenus peuvent être supprimés ou modifiés).
+	\end{itemize}
+	De plus, toute démarche de collecte doit respecter :
+	\begin{itemize}
+		\item le RGPD (ou législation locale équivalente) ;
+		\item les conditions d’utilisation des sites ;
+		\item le consentement explicite lorsque les données ne sont pas publiques.
+	\end{itemize}
+	Une investigation bien menée est donc avant tout \textbf{responsable et transparente}.
+	
+	\subsection{Conclusion de la méthodologie}
+	En résumé, la méthodologie d’investigation numérique repose sur une démarche scientifique adaptée au monde numérique. 
+	Elle allie rigueur, transparence et éthique pour permettre de produire un travail crédible et respectueux. 
+	Les six étapes — cadrage, planification, collecte, préservation, analyse et rapport — forment un cycle complet où chaque phase est essentielle à la validité des résultats. 
+	Appliquée à un cadre académique comme celui de Polytechnique Yaoundé, elle offre aux étudiants une introduction concrète aux enjeux de la cybersécurité, de la veille informationnelle et de la gestion de la preuve numérique.
+	
+
+	\section{Résultats de l'investigation}
+	
+	Le but de ce devoir d'investigations numériques était de récolter un maximum d'informations sur notre duo à partir de traces numériques. Cependant, la recherche a rapidement montré que la présence en ligne du duo était limitée, ce qui a nécessité une approche méthodique et une utilisation combinée de plusieurs techniques OSINT (Open Source Intelligence).
+	
+	1. Définition du périmètre
+	
+	La première étape a consisté à définir précisément le champ de recherche.
+	Le duo étant composé d’étudiantes de CIN4 à l’École Polytechnique de Yaoundé, la recherche a été centrée sur :
+	
+	les plateformes académiques (sites universitaires, documents PDF publics, publications d’événements ou conférences) ;
+	
+	les réseaux sociaux les plus susceptibles de contenir des informations personnelles publiques (Facebook, Instagram, LinkedIn) ;
+	
+	les plateformes associatives et de concours techniques (DevPost, GitHub, Kaggle, etc.).
+	
+2. Méthodes de collecte utilisées
+2.1 Recherche avancée sur les moteurs de recherche
+
+L’essentiel de la collecte s’est fait via des opérateurs de recherche :
+
+“CHEUTCHEU LONGA” site:linkedin.com
+
+“CHEUTCHEU LONGA” + “Polytechnique Yaoundé” : ici, on a pu trouver son matricule étudiant, la liste des résultats du concours de polytechnique qu'elle a obtenu, sa filière, etc.
+
+
+
+Cette technique a permis d’identifier plusieurs fragments d’informations dispersés : une mention dans une liste académique, un profil LinkedIn incomplet, et quelques participations à des événements étudiants.
+
+2.2 Observation des réseaux sociaux publics
+
+Bien que la présence numérique soit faible, une recherche a été effectuée sur les principaux réseaux :
+
+Facebook : exploration des profils associés aux prénoms et à la localisation Yaoundé.
+
+Instagram : vérification de comptes personnels potentiels, avec attention portée aux abonnements et centres d’intérêt.
+
+LinkedIn : plateforme la plus structurée, offrant parfois des données académiques et professionnelles.
+
+Au terme de cette investigation numérique, il apparaît que la présence en ligne de notre duo est relativement faible, et essentiellement concentrée autour de quelques traces institutionnelles et sociales limitées.
+
+L’enquête a permis de mettre en œuvre différentes méthodes d’investigation OSINT  recherche avancée, vérification d’archives web, exploration de métadonnées et recoupement de sources , tout en respectant les principes éthiques de la collecte d’informations publiques.
+Même si les résultats obtenus sont modestes en volume, leur analyse a offert une compréhension approfondie de la visibilité numérique réelle du duo et de la nature des traces laissées sur Internet.
+
+Cette expérience a également mis en évidence plusieurs enseignements essentiels :
+
+L’importance de contrôler activement son image numérique et de choisir ce qui est rendu public ;
+
+Le rôle de la cohérence entre les différents profils (académiques, sociaux, professionnels) ;
+
+Et la nécessité de sensibiliser chaque internaute à la traçabilité de ses publications, même les plus anodines.
+	
+\end{document}
