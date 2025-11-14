@@ -1,0 +1,170 @@
+\documentclass[12pt,a4paper]{report}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\usepackage{graphicx} 
+
+\begin{document}
+	
+	
+	\begin{titlepage}
+		\centering
+		
+	
+		\includegraphics[width=0.25\textwidth]{logo.png}\\[2cm]
+		
+	
+		{\Huge \textbf{Théories et Pratiques de
+				l’Investigation Numérique}}\\[1.5cm]
+		
+		
+		{\Large Matière : Théories et Pratiques de
+			l’Investigation Numérique}\\[0.5cm]
+		{\Large Enseignant :M. MINKA Thierry}\\[0.5cm]
+		{\Large Année académique : 2025--2026}\\[2cm]
+		
+		
+		{\Large  Par l'étudiante : ZE MVONDO Océanne M.}\\[0.5cm]
+		{\Large Filière : 4e année CIN }\\[2cm]
+		
+		
+		
+	 \includegraphics[width=0.6\textwidth]{C:/Users/USER/Documents/COURS/CIN 4/forensic.jpg}\\[4cm]
+		
+	
+	
+	\end{titlepage}
+	
+	
+	
+	\setlength{\parskip}{1em} 
+	\setlength{\parindent}{0pt} 
+	
+
+	
+ 
+	
+\section*{Exercices  Archéologie des Régimes de Vérité Numérique
+	}
+
+
+\section*{Partie 1 : Analyse Historique et Épistémologique}
+
+\subsection*{1. Analyse comparative des régimes de vérité}
+
+Pour cet exercice, nous avons choisi de comparer deux périodes assez différentes : les années 1990-2000 d’une part, et les années 2010-2020 d’autre part. Ces deux périodes nous ont paru intéressantes parce qu’elles correspondent à deux grandes phases dans l’évolution du numérique : la première avec l’arrivée d’Internet dans les foyers, la deuxième avec l’explosion des réseaux sociaux et des smartphones.
+
+Nous avons essayé de calculer leurs vecteurs de dominance \(\vec{R} = (\alpha_T, \alpha_J, \alpha_S, \alpha_P)\), c’est-à-dire les poids respectifs des dimensions technique, juridique, sociale et politique dans la construction du « régime de vérité » de chaque période.
+
+Pour les années 1990-2000, nous pensons que la partie technique \(\alpha_T\) domine largement, parce qu’à ce moment-là, tout tournait autour de la mise en place des infrastructures et des premiers usages d’Internet. La partie juridique \(\alpha_J\) commence à émerger, mais reste encore assez faible parce que les lois sur le numérique n’étaient pas encore bien développées. Les dimensions sociale \(\alpha_S\) et politique \(\alpha_P\) sont plutôt faibles, puisque les réseaux sociaux n’existaient pas vraiment, et les questions politiques liées au numérique étaient peu visibles.
+
+Pour les années 2010-2020, la situation est différente. La dimension sociale \(\alpha_S\) est devenue beaucoup plus importante avec la généralisation des réseaux sociaux, qui influencent beaucoup la diffusion des informations et la construction des vérités. La dimension juridique \(\alpha_J\) aussi a pris plus de place, notamment avec l’arrivée du RGPD et des lois sur la protection des données. La technique \(\alpha_T\) reste importante, mais elle évolue vers des technologies plus complexes, comme le cloud et la blockchain. La dimension politique \(\alpha_P\) s’est aussi renforcée, avec des débats sur la régulation des plateformes et la souveraineté numérique.
+
+En regardant ces différences, nous voyons une sorte de rupture épistémologique, comme Foucault l’appelle : le passage d’un régime où la vérité reposait surtout sur la technique et les experts à un régime où la vérité est aussi construite par les réseaux sociaux, la loi et la politique. Cette rupture est liée à plusieurs facteurs sociotechniques : la montée en puissance des plateformes sociales, l’augmentation des données personnelles, et la multiplication des lois pour encadrer tout ça.
+
+Quant à savoir si cette transition est progressive ou révolutionnaire, nous pensons que c’est plutôt une évolution progressive. Ce n’est pas qu’un changement brutal, mais plutôt un enchaînement de petits changements qui ont fini par transformer complètement la façon dont la vérité est construite dans le numérique. Cela dit, certains événements, comme les révélations de Snowden, ont accéléré cette prise de conscience.
+
+\subsection*{2. Étude de cas archéologique foucaldienne}
+
+Pour cette étude, nous avons choisi de nous pencher sur l’affaire Silk Road, cette plateforme en ligne qui permettait de vendre des produits illégaux entre 2011 et 2013. C’est un bon exemple pour comprendre comment un régime de vérité numérique s’est construit à cette époque.
+
+En analysant cette affaire comme une formation discursive au sens de Foucault, nous avons essayé de voir ce qui était « dicible » et « pensable » à ce moment-là. Par exemple, la possibilité même de créer un marché noir numérique était à la fois innovante et inquiétante. La légitimité des autorités judiciaires pour intervenir sur le darknet a été un point central, mais la technologie derrière Silk Road (notamment Tor et Bitcoin) échappait en partie aux cadres traditionnels.
+
+Le régime de vérité en action était donc marqué par un flou entre ce qui était connu et accepté socialement, et ce qui était perçu comme une zone d’ombre ou même de danger. Les discours publics tournaient autour de la lutte contre le crime organisé numérique, tandis que certains acteurs valorisaient cette plateforme comme un symbole de liberté et d’anonymat.
+
+Comparé à une affaire contemporaine, comme les débats autour de la modération sur les réseaux sociaux (par exemple Twitter ou Facebook), on voit que le régime de vérité a évolué : aujourd’hui, ce sont davantage les questions de responsabilité des plateformes et de la désinformation qui dominent, avec une forte implication politique et sociale.
+
+Cette comparaison montre que le régime de vérité n’est pas fixe, il change selon les technologies, les normes sociales et les enjeux politiques qui traversent chaque période.
+
+\section*{Partie 2 : Modélisation Mathématique et Prospective}
+
+\subsection*{3. Modélisation de l’Évolution des Régimes}
+
+Pour cette partie, nous avons essayé de construire un modèle mathématique simple pour représenter comment les régimes de vérité évoluent au fil du temps. On note \(\vec{R}_t = (\alpha_T, \alpha_J, \alpha_S, \alpha_P)\) le vecteur à un temps \(t\), et on cherche à exprimer \(\vec{R}_{t+1}\) en fonction de \(\vec{R}_t\) et de plusieurs facteurs comme les changements technologiques \(\Delta Tech_t\), légaux \(\Delta Legal_t\), et sociaux \(I_t\).
+
+On propose une fonction \(F\) qui combine ces éléments :
+
+\[
+\vec{R}_{t+1} = F(\vec{R}_t, \Delta Tech_t, \Delta Legal_t, I_t)
+\]
+
+Dans notre modèle, on imagine que chaque facteur influe de façon additive sur chaque composante du vecteur, par exemple :
+
+\[
+\vec{R}_{t+1} = \vec{R}_t + \beta_1 \Delta Tech_t + \beta_2 \Delta Legal_t + \beta_3 I_t
+\]
+
+où \(\beta_i\) sont des coefficients qui représentent l’importance relative de chaque facteur.
+
+Ensuite, nous avons simulé cette évolution sur une période de 50 ans, en testant différents scénarios :  
+\begin{itemize}
+	\item un scénario où les innovations technologiques s’accélèrent fortement ;  
+	\item un autre où les législations se durcissent ;  
+	\item un dernier où les facteurs sociaux deviennent très influents (par exemple, une forte mobilisation citoyenne).
+\end{itemize}
+
+Nos simulations montrent que selon les valeurs des \(\beta_i\), le régime de vérité peut changer doucement ou au contraire connaître des ruptures importantes. Par exemple, une accélération technologique forte peut rapidement augmenter \(\alpha_T\), mais sans adaptation légale, cela peut créer des tensions.
+
+\subsection*{4. Vérification de l’Accélération Technologique}
+
+Pour vérifier si les changements de régime s’accélèrent dans le temps, nous avons collecté quelques dates clés liées à des changements majeurs (par exemple : naissance du web, apparition des smartphones, lois majeures).
+
+On teste la loi :
+
+\[
+\Delta t_{n+1} = k \cdot \Delta t_n
+\]
+
+où \(\Delta t_n\) est l’intervalle entre deux changements successifs.
+
+En faisant une régression non-linéaire sur ces données, nous avons estimé la constante \(k\). Si \(k < 1\), cela indique une accélération.
+
+Nos résultats suggèrent que \(k\) est légèrement inférieur à 1, ce qui appuie l’idée que les changements s’accélèrent, même si l’échantillon est petit et les données approximatives. Nous estimons donc que le prochain changement majeur pourrait survenir plus tôt qu’on ne le pensait.
+
+\subsection*{5. Analyse du Trilemme CRO Historique}
+
+Pour chaque période étudiée, nous avons estimé les scores moyens du trilemme CRO (Confidentialité, Réactivité, Ouverture). Nous avons ensuite tracé l’évolution de ces scores dans un espace tridimensionnel pour visualiser les compromis historiques dominants.
+
+Notre analyse montre que, historiquement, il y a souvent eu un arbitrage difficile entre ces trois dimensions. Par exemple, dans les années 1990, la priorité était souvent donnée à l’ouverture, au détriment parfois de la confidentialité. Plus récemment, avec les enjeux liés à la protection des données, la confidentialité a gagné en importance, ce qui peut réduire la réactivité des systèmes.
+
+Enfin, nous avons tenté de projeter l’évolution future du trilemme, en envisageant des scénarios où la technologie pourrait permettre de mieux concilier ces trois aspects, mais aussi des scénarios où des tensions persistantes continueraient à exister.
+
+\subsection*{6. Reconstruction Archéologique d’Investigation}
+
+Nous avons choisi une affaire emblématique des années 1990, celle de Kevin Mitnick, un hacker célèbre à cette époque. Nous avons essayé de reconstruire l’investigation en utilisant les outils et méthodes disponibles à ce moment-là, comme l’analyse des logs, l’écoute téléphonique, et la surveillance physique.
+
+Puis, nous avons refait l’analyse avec des outils et concepts modernes, par exemple en utilisant la corrélation automatique de données, la cartographie réseau, et les analyses comportementales.
+
+Cette comparaison nous a permis de mieux comprendre non seulement les résultats obtenus, mais aussi les régimes de vérité qui s’appliquaient. Les limitations technologiques de l’époque ont clairement influencé la construction de la vérité judiciaire, en limitant la quantité et la qualité des preuves disponibles.
+
+\subsection*{7. Projet de Recherche Archéologique}
+
+Nous avons identifié un vide dans l’archéologie de la discipline : la période de transition entre les débuts d’Internet et l’avènement des réseaux sociaux, vers la fin des années 2000. Peu d’études foucaldiennes ont exploré cette phase en détail.
+
+Nous formulons donc une hypothèse historique testable : cette période a constitué une rupture épistémologique majeure, où les discours sur la vie privée, la surveillance et la liberté d’expression ont commencé à se restructurer.
+
+Pour vérifier cette hypothèse, nous comptons collecter des sources primaires comme les RFC, des publications académiques et des débats parlementaires de l’époque. Nous appliquerons ensuite la méthode archéologique foucaldienne pour analyser ces documents.
+
+L’objectif final est de rédiger un article académique avec un cadre théorique solide, qui puisse éclairer cette transition encore peu explorée.
+
+\subsection*{8. Analyse Prospective des Régimes Futurs}
+
+Pour terminer, nous avons développé un scénario crédible pour la période 2030-2050. Nous imaginons un régime de vérité où l’intelligence artificielle joue un rôle central dans la validation des informations, avec des plateformes automatisées qui contrôlent la diffusion des contenus.
+
+Nous avons défini les conditions de possibilité de ce régime : avancées technologiques en IA, évolutions législatives sur la responsabilité algorithmique, et transformations sociales liées à la confiance dans les machines.
+
+Nous proposons une méthodologie d’investigation adaptée, combinant analyses techniques, juridiques et sociologiques, pour étudier ce futur régime.
+
+Enfin, nous anticipons plusieurs défis éthiques et épistémologiques, notamment sur la transparence des algorithmes, le contrôle humain sur les décisions automatiques, et les risques de manipulation des savoirs.
+
+\end{document}
+
+
+	
+	
+\end{document}
